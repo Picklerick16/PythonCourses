@@ -7,6 +7,6 @@ def main():
         print("no")
 
 def answer_check(answer):
-    return answer == "42" | "forty-two" | "forty two"
+    return answer in ["42", "forty-two", "forty two"]
 
 main()
