@@ -15,8 +15,11 @@ def is_valid(s):
         
         # Check if all characters after the second letter are digits
         for ch in s[2:]:
-            if not ch.isdigit():
-                return False
+            if ch.isdigit():
+                for end_character in s[ch:]:
+                    if not end_character.isdigit():
+                        return False
+                return True
         return True
 
     return False
