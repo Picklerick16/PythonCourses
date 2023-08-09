@@ -7,21 +7,20 @@ def main():
 
 
 def is_valid(s):
-    # Check if plate is between 2 and 6 characters long
-    if 1 < len(s) <= 6:
+    # Check if plate has at least 3 characters
+    if 2 <= len(s) <= 6:
         # Check if first and second characters are letters
-        if not (s[0].isalpha() and s[1].isalpha()):
-            return False
+        if s[0].isalpha() and s[1].isalpha():
+            # Check if all characters after the second character are digits
+            for ch in s[2:]:
+                if ch.isdigit():
+                    index = s.index(ch)
+                    for end_character in s[index:]:
+                        if not end_character.isdigit():
+                            return False
+                    return True
+            return False  # No digits found after the second character
         
-        # Check if all characters after the second letter are digits
-        for ch in s[2:]:
-            if ch.isdigit():
-                for end_character in s[ch:]:
-                    if not end_character.isdigit():
-                        return False
-                return True
-        return True
-
     return False
 
 
