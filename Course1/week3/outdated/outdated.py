@@ -1,5 +1,5 @@
 def main():
-    middle_endian_date = list(input("Date: "))
+    middle_endian_date = str(input("Date: "))
     format_date(middle_endian_date)
 
 def format_date(unformatted_date):
@@ -17,9 +17,6 @@ def format_date(unformatted_date):
         'February': '02',
         'January': '01'
     }
-
-    # Join the list back into a string
-    unformatted_date = ''.join(unformatted_date)
     
     # Split date into month, day, and year
     if "/" in unformatted_date:
