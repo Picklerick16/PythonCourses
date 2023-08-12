@@ -8,4 +8,5 @@ def convert_to_emoji(emoji_string):
     # Convert the input string to emoji
     return emoji.emojize(f"Python is {input(emoji_string)}")
 
-main()
+if __name__ == "__main__":
+    main()
