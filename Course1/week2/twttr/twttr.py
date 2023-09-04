@@ -2,7 +2,7 @@
 def main():
 
     normal_text = list(input("Input: "))
-    omit_vowels(normal_text)
+    print(omit_vowels(normal_text))
 
 def omit_vowels(text):
     # Make a list of vowels to remove from the text
@@ -14,7 +14,7 @@ def omit_vowels(text):
             # Remove it from the text
             text.remove(letter)
     # Convert the text back to a string   
-    print("".join(text))
+    return "".join(text)
 
 if __name__ == "__main__":
     main()
