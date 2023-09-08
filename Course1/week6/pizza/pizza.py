@@ -11,11 +11,11 @@ def main():
             with open(sys.argv[1]) as file:
                 reader = csv.reader(file)
                 for row in reader:
-                    menu.append
+                    menu.append(row)
+            print(tabulate(menu, tablefmt="grid"))
                     
                    
 
-            print(f"{n_lines} non-commented lines")
         except FileNotFoundError:
             print("File not found.")
     else:
