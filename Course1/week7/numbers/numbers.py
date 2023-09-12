@@ -1,22 +1,19 @@
-import re
-import sys
-
 
 def main():
     if validate(input("IPv4 Address: ")):
-        print("jezus")
-
+        print("Valid")
+    else:
+        print("invalid")
 
 def validate(ip):
-    range = range(0,255)
     try: 
-        first, second, third, fourth = str(ip).split(".")
-        
+        list_numbers = str(ip).split(".")
+        for num in list_num:
+            if not num in range(255):
+                return False
+        return True
     except:
-        print("failled")
-
-
-...
+        print("invalid")
 
 
 if __name__ == "__main__":
